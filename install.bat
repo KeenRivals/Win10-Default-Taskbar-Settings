@@ -13,8 +13,8 @@ reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Adv
 :: Hide the People button by default
 reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People /v PeopleBand /t REG_DWORD /d 0 /f
 
-:: Hide the News Feed by default
-reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Feeds /v ShellFeedsTaskbarViewMode /t REG_DWORD /d 2 /f
+:: Disable the News Feed
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" /v EnableFeeds /t REG_DWORD /d 0 /f
 
 :: Unload the default user's hive
 reg unload HKLM\DefaultUsers
