@@ -13,6 +13,9 @@ reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Adv
 :: Hide the People button by default
 reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People /v PeopleBand /t REG_DWORD /d 0 /f
 
+:: Set taskbar alignment by default
+reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People /v PeopleBand /t REG_DWORD /d 0 /f
+
 :: Disable the News Feed
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" /v EnableFeeds /t REG_DWORD /d 0 /f
 
