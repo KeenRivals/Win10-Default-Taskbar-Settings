@@ -22,6 +22,9 @@ reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Adv
 :: Hide taskbar chat by default
 reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarMn /t REG_DWORD /d 0 /f
 
+:: Prevent Microsoft Teams App from Installing
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\MicrosoftTeams_8wekyb3d8bbwe
+
 :: Hide taskbar badges by default
 reg add HKLM\DefaultUsers\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarBadges /t REG_DWORD /d 0 /f
 
